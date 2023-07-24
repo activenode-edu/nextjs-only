@@ -1,7 +1,6 @@
 version: "3.8"
 services:
   nextjs:
-    pull_policy: build
     build:
       context: ./
       dockerfile: Dockerfile
