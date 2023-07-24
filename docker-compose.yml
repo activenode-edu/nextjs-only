@@ -4,12 +4,13 @@ services:
     image: node:20
     hostname: mynextjs
     command: >
-      sh -c "git clone https://github.com/activenode-edu/nextjs-only.git /nextjs && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
+      sh -c "echo test1 && git clone https://github.com/activenode-edu/nextjs-only.git /nextjs && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
     networks:
       - webnetwork
     deploy:
       update_config:
         order: start-first
+
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3500"]
       interval: 30s
