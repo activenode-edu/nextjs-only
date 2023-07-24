@@ -4,3 +4,6 @@ services:
     build: ./
     networks:
       - webnetwork
+networks:
+  webnetwork:
+    external: true
