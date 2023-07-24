@@ -1,12 +1,12 @@
 version: "3.8"
 services:
   nextjs:
-    build:
-      context: $PWD
-      dockerfile: Dockerfile
-      target: base
+    image: node:20
+    volumes:
+      - ${PWD}:/nextjs
     networks:
       - webnetwork
+    command: ls /nextjs
 networks:
   webnetwork:
     external: true
