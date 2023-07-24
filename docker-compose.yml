@@ -1,5 +1,7 @@
 version: "3.8"
 services:
   nextjs:
-    build: ./
-    command: ls /nextjs
+    image: node:20
+    command: >
+      sh -c "git clone https://github.com/activenode-edu/nextjs-only.git /nextjs \
+        && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
