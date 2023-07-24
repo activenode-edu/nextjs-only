@@ -5,3 +5,9 @@ services:
     command: >
       sh -c "git clone https://github.com/activenode-edu/nextjs-only.git /nextjs \
         && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
+    networks:
+      - webnetwork
+
+networks:
+  webnetwork:
+    external: true
