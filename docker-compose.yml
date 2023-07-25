@@ -1,10 +1,10 @@
 version: "3.8"
 services:
   nextjs:
-    build: .
+    image: node:20
     hostname: mynextjs
     command: >
-      sh -c "echo test1 && git clone https://github.com/activenode-edu/nextjs-only.git /nextjs && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
+      sh -c "echo test2 && git clone https://github.com/activenode-edu/nextjs-only.git /nextjs && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
     networks:
       - webnetwork
     deploy:
