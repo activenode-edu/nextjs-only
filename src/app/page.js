@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      New Version. 45 Downtime.
+      New Version. 0? Downtime.
     </main>
   );
 }
