@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   nextjs:
-    pull_policy: build
+    pull_policy: always
     image: node:20
     hostname: mynextjs
     command: >
