@@ -10,6 +10,7 @@ services:
     ports:
       - 9010:3500
     deploy:
+      replicas: 2
       update_config:
         order: start-first
 
