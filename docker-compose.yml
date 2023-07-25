@@ -2,7 +2,7 @@ version: "3.8"
 services:
   nextjs:
     pull_policy: always
-    image: node:20
+    build: .
     hostname: mynextjs
     command: >
       sh -c "echo test1 && git clone https://github.com/activenode-edu/nextjs-only.git /nextjs && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
