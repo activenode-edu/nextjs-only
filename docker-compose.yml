@@ -7,8 +7,6 @@ services:
       sh -c "echo test2 && git clone https://github.com/activenode-edu/nextjs-only.git /nextjs && ls -al /nextjs && cd /nextjs && npm ci && npm run build && npm run start"
     networks:
       - webnetwork
-    ports:
-      - 9010:3500
     deploy:
       replicas: 2
       update_config:
